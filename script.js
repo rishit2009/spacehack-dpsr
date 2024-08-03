@@ -1,3 +1,10 @@
+toggleBtn = document.querySelector('.toggle');
+list = document.querySelector('nav');
+
+toggleBtn.addEventListener('click',function(){
+    list.classList.toggle('hidden');
+})
+
 const trailer = document.getElementById("trailer");
 
 const animateTrailer = (e, interacting) => {

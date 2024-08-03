@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body class="bg-slate-950 text-white m-0 w-full h-full">
     <div id="trailer"></div>
     <div class="flex justify-between p-8">
         <a class="interactable font-bold text-3xl" href="index.html">Space Pulse</a>
-        <button class="interactable font-semibold text-xl">MENU</button>
+        <button class="toggle interactable font-semibold text-xl"><ion-icon name="menu" size="large"></ion-icon></button>
     </div>
-    <nav class="w-full bg-emerald-500">
-        <ul class="w-full flex flex-col gap-8 items-center justify-items-center font-extrabold text-8xl py-8">
-            <li class="bg-emerald-500 hover:bg-emerald-700 "><a class="interactable w-full" href="#">Home</a></li>
-            <li class="bg-emerald-500 hover:bg-emerald-700 "><a class="interactable w-full" href="#">Explore</a></li>
-            <li class="bg-emerald-500 hover:bg-emerald-700 "><a class="interactable w-full" href="#">Hello</a></li>
-            <li class="bg-emerald-500 hover:bg-emerald-700"><a class="interactable w-full" href="#">IDK</a></li>
+    <nav class="w-full bg-emerald-500 hidden">
+        <div class="w-full  gap-8 flex flex-col gap-4 items-center font-extrabold text-8xl py-8 ">
+            <a href="index.html" class="w-full text-center hover:bg-emerald-700 pb-4 interactable">Home</a>
+            <a href="#" class="w-full text-center hover:bg-emerald-700 pb-4 interactable">Explore</a>
+            <a href="#" class="w-full text-center hover:bg-emerald-700 pb-4 interactable">Hello</a>
+            <a href="#" class="w-full text-center hover:bg-emerald-700 pb-4 interactable">IDK</a>
         </ul>
     </nav>
 </body>
