@@ -17,6 +17,12 @@ body:hover > #trailer {
   transition: opacity 500ms ease;
 }
 
+@media (max-width: 767px) {
+  #trailer {
+      display: none;
+  }
+}
+
 #hidden-nav {
   position: fixed;
   top: -100px; /* Start hidden above the viewport */
