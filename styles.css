@@ -16,3 +16,35 @@ body:hover > #trailer {
   opacity: 0;
   transition: opacity 500ms ease;
 }
+
+#hidden-nav {
+  position: fixed;
+  top: -100px; /* Start hidden above the viewport */
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-visible {
+  transform: translateY(125px); /* Slide down into view */
+}
+
+.nav-link {
+  position: relative; /* Ensure the underline effect is relative to each link */
+}
+
+.nav-link::after {
+  content: '';
+  height: 2px;
+  background-color: #dadada;
+  width: 0;
+  position: absolute;
+  bottom: -5px;
+  left: 0.75rem;
+  transition: all .35s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 70%;
+}

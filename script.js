@@ -1,10 +1,3 @@
-toggleBtn = document.querySelector('.toggle');
-list = document.querySelector('nav');
-
-toggleBtn.addEventListener('click',function(){
-    list.classList.toggle('hidden');
-})
-
 const trailer = document.getElementById("trailer");
 
 const animateTrailer = (e, interacting) => {
@@ -30,3 +23,14 @@ window.onmousemove = e => {
   
 
 }
+
+
+window.addEventListener('scroll', function() {
+  const hiddenNav = document.getElementById('hidden-nav');
+  if (window.scrollY > 500) {
+    hiddenNav.classList.add('nav-visible');
+  } else {
+    hiddenNav.classList.remove('nav-visible');
+  }
+});
+
