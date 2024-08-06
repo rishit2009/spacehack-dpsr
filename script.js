@@ -34,3 +34,10 @@ window.addEventListener('scroll', function() {
   }
 });
 
+
+function toggleresponsive() {
+  const ham = document.querySelector('.hamburger')
+  ham.classList.toggle('active')
+  const wrapper = document.querySelector('.hamburger-wrapper')
+  wrapper.classList.toggle('wrapper-active')
+}
