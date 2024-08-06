@@ -17,7 +17,7 @@ body:hover > #trailer {
   transition: opacity 500ms ease;
 }
 
-@media (max-width: 768px) {
+@media (pointer: coarse) and (hover: none){
   #trailer {
       display: none;
   }
