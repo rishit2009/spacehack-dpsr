@@ -1,10 +1,3 @@
-toggleBtn = document.querySelector('.toggle');
-list = document.querySelector('nav');
-
-toggleBtn.addEventListener('click',function(){
-    list.classList.toggle('hidden');
-})
-
 const trailer = document.getElementById("trailer");
 
 const animateTrailer = (e, interacting) => {
@@ -29,4 +22,24 @@ window.onmousemove = e => {
   animateTrailer(e, interacting);
   
 
+}
+
+
+window.addEventListener('scroll', function() {
+  const hiddenNav = document.getElementById('hidden-nav');
+  if (window.scrollY > 500) {
+    hiddenNav.classList.add('nav-visible');
+  } else {
+    hiddenNav.classList.remove('nav-visible');
+  }
+});
+
+
+function toggleresponsive() {
+  const ham = document.querySelector('.hamburger')
+  const nav = document.querySelector('.mobile-nav')
+  ham.classList.toggle('active')
+  const wrapper = document.querySelector('.hamburger-wrapper')
+  wrapper.classList.toggle('wrapper-active')
+  nav.classList.toggle('mobile-active')
 }
