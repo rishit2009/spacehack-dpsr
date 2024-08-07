@@ -25,19 +25,20 @@ body:hover > #trailer {
 
 #hidden-nav {
   position: fixed;
-  top: -100px; /* Start hidden above the viewport */
+  top: -100px; 
   left: 0;
   right: 0;
   z-index: 1000;
   transition: transform 0.3s ease-in-out;
+  transform-origin: 50% 50% 0px;
 }
 
 .nav-visible {
-  transform: translateY(125px); /* Slide down into view */
+  transform: translateY(125px); 
 }
 
 .nav-link {
-  position: relative; /* Ensure the underline effect is relative to each link */
+  position: relative; 
 }
 
 .nav-link::after {
@@ -85,7 +86,7 @@ body:hover > #trailer {
   height: 4rem;
   border-radius: 50%;
   border-width: 1px;
-  transition: width 0.5s, height 0.5s, border-radius 0.5s, margin-right 0.5s;
+  transition: width 0.5s, height 0.5s, border-radius 0.5s;
   position: relative;
   
 }
@@ -93,16 +94,28 @@ body:hover > #trailer {
 .wrapper-active {
   width: 20rem;
   height: 25rem;
-
+  /* margin-right: calc(((100vw - 20rem) /2) - 5vw); */
   border-radius: 10%;
   
 }
 
 .mobile-nav {
   opacity: 0;
-  transition: opacity 01s ease-in-out 0.5s;
+  transform: scaleY(0);
+  transition: all .1s ease-in-out ;
+  display: flex;
+  transform-origin: 0;
+
+
 }
 
 .mobile-active {
   opacity: 1;
+  transform: scaleY(1);
+  transition: all 0.5s ease-in-out 0s;
+  
+}
+
+.mobile-ultra-active{
+  display: flex;
 }
