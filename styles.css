@@ -1,3 +1,8 @@
+:root {
+  --color1: #B071FF;
+  --color2: #FF9C71;
+}
+
 body:hover > #trailer {
   opacity: 1;
 }
