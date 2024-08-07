@@ -90,11 +90,7 @@ body:hover > #trailer {
   position: absolute;
   top: 2.5rem;
   right: 2rem;
-<<<<<<< Updated upstream
-  backdrop-filter: blur(10px);
-=======
   
->>>>>>> Stashed changes
   
 }
 
@@ -105,10 +101,7 @@ body:hover > #trailer {
   transform: translateX(50%);
   right: 50%;
   max-width: 100%;
-<<<<<<< Updated upstream
-=======
   backdrop-filter: blur(10px);
->>>>>>> Stashed changes
 }
 
 @media screen and (max-width:320px) {
