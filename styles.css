@@ -87,10 +87,13 @@ body:hover > #trailer {
   border-radius: 50%;
   border-width: 1px;
   transition: width 0.5s, height 0.5s, border-radius 0.5s;
-  position: absolute;
-  right: 0rem;
-  top: 0rem;
   backdrop-filter: blur(10px);
+  z-index: 100;
+  position: absolute;
+  top: 2.5rem;
+  right: 2rem;
+ 
+
   
 }
 
@@ -98,6 +101,8 @@ body:hover > #trailer {
   width: 20rem;
   height: 25rem;
   border-radius: 10%;
+  position: absolute;
+
   
   
 }
