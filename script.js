@@ -42,7 +42,4 @@ function toggleresponsive() {
   const wrapper = document.querySelector('.hamburger-wrapper')
   wrapper.classList.toggle('wrapper-active')
   nav.classList.toggle('mobile-active')
-  // setTimeout(() => {
-  //   nav.classList.toggle('mobile-ultra-active');
-  // }, 400);
 }

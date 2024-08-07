@@ -87,24 +87,32 @@ body:hover > #trailer {
   border-radius: 50%;
   border-width: 1px;
   transition: width 0.5s, height 0.5s, border-radius 0.5s;
-  position: relative;
+  position: absolute;
+  right: 0rem;
+  top: 0rem;
+  backdrop-filter: blur(10px);
   
 }
 
 .wrapper-active {
   width: 20rem;
   height: 25rem;
-  /* margin-right: calc(((100vw - 20rem) /2) - 5vw); */
   border-radius: 10%;
   
+  
+}
+
+@media screen and (max-width:320px) {
+  .wrapper-active {
+    width: 15rem;
+  }
 }
 
 .mobile-nav {
   opacity: 0;
   transform: scaleY(0);
   transition: all .1s ease-in-out ;
-  display: flex;
-  transform-origin: 0;
+  transform-origin: top;
 
 
 }
@@ -112,10 +120,36 @@ body:hover > #trailer {
 .mobile-active {
   opacity: 1;
   transform: scaleY(1);
-  transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out .2s;  
+}
+
+
+@media (any-hover: hover) {
+  #trailer{
+    display: block !important;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .nav-responsive{
+    display: none;
+  }
+  
+  .desktop-nav{
+    display: flex;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .desktop-nav{
+    display: none !important;
+  }
+  .nav-responsive{
+    display: flex;
+  }
   
 }
 
-.mobile-ultra-active{
-  display: flex;
+.nav-responsive:has(.wrapper-active) > a.heading{
+  display: none;
 }
