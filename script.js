@@ -36,9 +36,9 @@ window.addEventListener('scroll', function() {
 
 
 function toggleresponsive() {
-  const ham = document.querySelector('.hamburger')
+  const ham = document.querySelector('#nav-icon3')
   const nav = document.querySelector('.mobile-nav')
-  ham.classList.toggle('active')
+  ham.classList.toggle('open')
   const wrapper = document.querySelector('.hamburger-wrapper')
   wrapper.classList.toggle('wrapper-active')
   nav.classList.toggle('mobile-active')
