@@ -40,16 +40,22 @@
         </nav>
       </div>
       
-    <div class="nav-responsive">
+    <div class="nav-responsive sticky top-0">
         <div class="flex w-full justify-between p-12">
             <p>
                 SpacePulse
             </p>
-            <div class="hamburger-wrapper" onclick="toggleresponsive()">
+            <div class="hamburger-wrapper relative" onclick="toggleresponsive()">
                 <div class="hamburger flex flex-col h-6 w-6 justify-around">
                     <div class="bar1 bar"></div>
                     <div class="bar2 bar"></div>
                 </div>
+                <nav class="mobile-nav  flex  flex-col gap-8 absolute bottom-20 left-8">
+                    <a href="#" class="font-semibold text-4xl">Home</a>
+                    <a href="#" class="font-semibold text-4xl">Explore</a>
+                    <a href="#" class="font-semibold text-4xl">Pricing</a>
+                    <a href="#" class="font-semibold text-4xl">Contact</a>
+                </nav>
             </div>
         </div>
         

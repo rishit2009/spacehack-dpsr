@@ -91,13 +91,18 @@ body:hover > #trailer {
 }
 
 .wrapper-active {
-  /* padding-top: 1rem;
-  padding-right: 1rem; */
   width: 20rem;
   height: 25rem;
-  
-  /* align-items: start;
-  justify-content: end; */
+
   border-radius: 10%;
   
+}
+
+.mobile-nav {
+  opacity: 0;
+  transition: opacity 01s ease-in-out 0.5s;
+}
+
+.mobile-active {
+  opacity: 1;
 }
