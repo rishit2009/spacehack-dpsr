@@ -27,7 +27,7 @@ window.onmousemove = e => {
 
 window.addEventListener('scroll', function() {
   const hiddenNav = document.getElementById('hidden-nav');
-  if (window.scrollY > 500) {
+  if (window.scrollY > 300) {
     hiddenNav.classList.add('nav-visible');
   } else {
     hiddenNav.classList.remove('nav-visible');
