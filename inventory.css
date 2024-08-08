@@ -61,32 +61,27 @@ main ul {
   flex-direction: column;
   list-style: none;
   padding: 0;
-  min-width: 50rem;
+  width: 25rem;
+  max-width: 50rem;
+  width: 100%;
 }
 main ul li {
-  position: relative;
   padding: 1rem;
   transition: background-color 200ms;
   display: flex;
-  align-items: center;
+  align-items: center;  
+  flex-direction: row;
   gap: 1rem;
+  border-bottom: var(--white)1px  solid;
+  max-width:100%;
 }
-main ul li::after {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  right: 0;
-  width: 100%;
-  content: "";
-  background: var(--slate-200);
-  border-radius: 100vmax;
-  height: 1px;
+@media screen and (max-width:500px) {
+  main ul li{
+    flex-direction: column;
+  }
 }
 main ul li p {
   flex-grow: 1;
-}
-main ul li:hover {
-  background-color: rgb(250 250 250 / 0.1);
 }
 main ul li .status {
   background-color: var(--orange-500);
