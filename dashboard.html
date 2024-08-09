@@ -176,8 +176,8 @@
         <!-- dialog -->
         <dialog class="relative">
                 <h1 class="my-4">Book an appointment</h1>
-                <button id="closeBtn" class="absolute right-2 top-2"><ion-icon name="close-circle-outline" size="large"></ion-icon></button>
-            <form action="" class="flex flex-col">                
+                <button value="cancel" formmethod="dialog" id="closeBtn" class="absolute right-2 top-2"><ion-icon name="close-circle-outline" size="large"></ion-icon></button>
+            <form class="flex flex-col">                
                 <div class="dropdown relative inline-block text-left">
                     <div>
                         <button id="dropdownButton" type="button"
@@ -205,7 +205,7 @@
                     </div>
                   </div>
                 <input type="datetime-local" class="rounded-lg p-2 bg-orange-400 hover:bg-orange-300 text-black font-semibold">
-                <button class="btn-2" id="confirmBtn">Confirm</button>
+                <button class="btn-2" id="confirmBtn" value="default">Confirm</button>
             </form>
         </dialog>
     </main>
@@ -237,16 +237,15 @@
     showButton.addEventListener('click', () => {
         Dialog.showModal();
         });
-        Dialog.addEventListener('close', (e) => {
-            outputBox.value = Dialog.returnValue === 'default' ? "No return value." : `ReturnValue: ${Dialog1.returnValue}.`;
-        });
         confirmBtn.addEventListener('click', (event) => {
             event.preventDefault();
-            Dialog1.close(inputEl.value); 
+            Dialog.close(inputEl.value); 
         });
-
-
-
+        
+        closeBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            Dialog.close(inputEl.value); 
+        });
 
         document.addEventListener('DOMContentLoaded', function() {
             const dropdownButton = document.getElementById('dropdownButton');
