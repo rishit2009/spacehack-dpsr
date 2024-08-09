@@ -11,24 +11,16 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="script.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
-	<link rel="icon" type="image/x-icon" href="favicon.png">
 
 </head>
-<style>
-    button.active{
-        background-color: rgb(56 189 248);
-    }
-     .tab-content:not(.active) {
-    display: none;
-  }
-  .tab-content.active {
-    display: block;
-  }
-</style> 
 
 <body>
-    <div class="min-h-32">
+    <div id="trailer" class="hidden"></div>
+
+    <header class="min-h-32">
         <div class="flex justify-between p-8 items-center desktop-nav">
             <a class="interactable font-bold text-2xl " href="index.html">Space Pulse</a>
     
@@ -78,42 +70,42 @@
             </div>
             
         </div>
-    </div>
+    </header>
 
     <main class="flex items-center flex-col px-12 mt-12 mx-auto">
             <div class="max-w-[40rem]">
                 <h2 class="font-bold text-3xl mb-8">Calendar</h2>
                 <div class="flex flex-col gap-4">
                     <div class="flex gap-2 justify-between overflow-x-auto">
-                        <button class="flex-col bg-sky-300 items-center flex p-2 rounded-lg hover:bg-sky-400 active min-w-16" data-tab-target="#eight">
+                        <button class="flex-col bg-green-400 items-center flex p-2 rounded-lg hover:bg-green-400 active min-w-16" data-tab-target="#eight">
                             <span class="text-sm text-gray-200">Sun</span>
                             <span class="text-lg font-semibold">11</span>
                         </button>
-                        <button class="flex-col bg-sky-300 items-center flex p-2 rounded-lg hover:bg-sky-400 min-w-16" data-tab-target="#nine">
+                        <button class="flex-col bg-green-400 items-center flex p-2 rounded-lg hover:bg-green-400 min-w-16" data-tab-target="#nine">
                             <span class="text-sm text-gray-200">Mon</span>
                             <span class="text-lg font-semibold">12</span>
                         </button>
-                        <button class="flex-col bg-sky-300 items-center flex p-2 rounded-lg hover:bg-sky-400 min-w-16" data-tab-target="#ten">
+                        <button class="flex-col bg-green-400 items-center flex p-2 rounded-lg hover:bg-green-400 min-w-16" data-tab-target="#ten">
                             <span class="text-sm text-gray-200">Tues</span>
                             <span class="text-lg font-semibold">13</span>
                         </button>
-                        <button class="flex-col bg-sky-300 items-center flex p-2 rounded-lg hover:bg-sky-400 min-w-16" data-tab-target="#eleven">
+                        <button class="flex-col bg-green-400 items-center flex p-2 rounded-lg hover:bg-green-400 min-w-16" data-tab-target="#eleven">
                             <span class="text-sm text-gray-200">Wed</span>
                             <span class="text-lg font-semibold">14</span>
                         </button>
-                        <button class="flex-col bg-sky-300 items-center flex p-2 rounded-lg hover:bg-sky-400 min-w-16" data-tab-target="#twelve">
+                        <button class="flex-col bg-green-400 items-center flex p-2 rounded-lg hover:bg-green-400 min-w-16" data-tab-target="#twelve">
                             <span class="text-sm text-gray-200">Thurs</span>
                             <span class="text-lg font-semibold">15</span>
                         </button>
-                        <button class="flex-col bg-sky-300 items-center flex p-2 rounded-lg hover:bg-sky-400 min-w-16" data-tab-target="#thirteen">
+                        <button class="flex-col bg-green-400 items-center flex p-2 rounded-lg hover:bg-green-400 min-w-16" data-tab-target="#thirteen">
                             <span class="text-sm text-gray-200">Fri</span>
                             <span class="text-lg font-semibold">16</span>
                         </button>
-                        <button class="flex-col bg-sky-300 items-center flex p-2 rounded-lg hover:bg-sky-400 min-w-16" data-tab-target="#fourteen">
+                        <button class="flex-col bg-green-400 items-center flex p-2 rounded-lg hover:bg-green-400 min-w-16" data-tab-target="#fourteen">
                             <span class="text-sm text-gray-200">Sat</span>
                             <span class="text-lg font-semibold">17</span>
                         </button>
-                        <button class="flex-col bg-sky-300 items-center flex p-2 rounded-lg hover:bg-sky-400 min-w-16" data-tab-target="#fifteen">
+                        <button class="flex-col bg-green-400 items-center flex p-2 rounded-lg hover:bg-green-400 min-w-16" data-tab-target="#fifteen">
                             <span class="text-sm text-gray-200">Sun</span>
                             <span class="text-lg font-semibold">18</span>
                         </button>
@@ -127,7 +119,6 @@
                             <div class="flex flex-row w-4/5 bg-orange-400 p-4 rounded-lg items-center gap-2">
                                 <img class="rounded-full" src="https://picsum.photos/seed/picsum/50" alt="">
                                 <p class="font-bold text-2xl">Dentist</p>
-                                <div><ion-icon name="ellipsis-vertical-outline" class="text-black"></ion-icon></div>
                             </div>
                         </div>
                 </div>
@@ -140,7 +131,6 @@
                         <div class="flex flex-row w-4/5 bg-orange-400 p-4 rounded-lg items-center gap-2">
                             <img class="rounded-full" src="https://picsum.photos/seed/picsum/50" alt="">
                             <p class="font-bold text-2xl">Neurologist</p>
-                            <div><ion-icon name="ellipsis-vertical-outline" class="text-black"></ion-icon></div>
                         </div>
                     </div>
                     <div class="flex flex-row items-center">
@@ -151,10 +141,9 @@
                         <div class="flex flex-row w-4/5 bg-orange-400 p-4 rounded-lg items-center gap-2">
                             <img class="rounded-full" src="https://picsum.photos/seed/picsum/50" alt="">
                             <p class="font-bold text-2xl">Physiotherapist</p>
-                            <div><ion-icon name="ellipsis-vertical-outline" class="text-black"></ion-icon></div>
                         </div>
                     </div>
-            </div>
+            </div></div>
             
             <div class="flex flex-col justify-center tab-content" id="ten">
                 <p class="text-xl font-bold mt-4">Nothing Today!</p>
@@ -177,10 +166,38 @@
             </div>
         </div>
 
-        <button class="flex items-center gap-4 border px-2 py-4 hover:bg-slate-900 transition  rounded-lg mt-8">   
+        <button class="flex items-center gap-4 border px-2 py-4 hover:bg-slate-900 transition rounded-lg mt-8 interactable" id="openDialog">   
             <ion-icon name="add-circle-outline" size="large"></ion-icon>
             <h3 class="text-xl font-semibold">New Appointment</h3>
         </button>
+
+
+        <!-- dialog -->
+        <dialog>
+            <h2></h2>
+            <form action="">
+                <details class="multiple-select">
+                    <summary>Select</summary>
+                    <div class="multiple-select-dropdown">
+                        <label>
+                            <input type="checkbox" hidden name="select" value="1">
+                            <span class="content">Therapy</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" hidden name="select" value="2">
+                            <span class="content">Excercise</span>
+                        </label>
+                        <label>
+                            <input type="checkbox" hidden name="select" value="3">
+                            <span class="content">Yoga</span>
+                        </label>
+                    </div>
+                </details>
+                <input type="datetime-local">
+                <button></button>
+                <button></button>
+            </form>
+        </dialog>
     </main>
 
 
@@ -199,6 +216,9 @@
             target.classList.add('active');
         })
     })
+
+
+
   </script>
 </body>
 
