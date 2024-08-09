@@ -1,3 +1,30 @@
+:root{
+    --black      : rgb(0 0 0);
+    --white      : rgb(255 255 255);
+    --slate-50   : rgb(248 250 252);
+    --slate-100  : rgb(241 245 249);
+    --slate-200  : rgb(226 232 240);
+    --slate-300  : rgb(203 213 225);
+    --slate-400  : rgb(148 163 184);
+    --slate-500  : rgb(100 116 139);
+    --slate-600  : rgb(71 85 105);
+    --slate-700  : rgb(51 65 85);
+    --slate-800  : rgb(30 41 59);
+    --slate-900  : rgb(15 23 42);
+    --slate-950  : rgb(2 6 23); 
+    --orange-50  : rgb(255 247 237);
+    --orange-100 : rgb(255 237 213);
+    --orange-200 : rgb(254 215 170);
+    --orange-300 : rgb(253 186 116);
+    --orange-400 : rgb(251 146 60);
+    --orange-500 : rgb(249 115 22);
+    --orange-600 : rgb(234 88 12);
+    --orange-700 : rgb(194 65 12);
+    --orange-800 : rgb(154 52 18);
+    --orange-900 : rgb(124 45 18);
+    --orange-950 : rgb(67 20 7);
+}
+
 button.active{
     background-color: rgb(22 163 74);
 }
@@ -7,3 +34,7 @@ display: none;
 .tab-content.active {
 display: block;
 }
+
+form label:has(input:checked + .content) {
+    background-color: var(--orange-600);
+  }

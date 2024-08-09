@@ -183,8 +183,16 @@ outputBox.value = Dialog3.returnValue === 'default' ? "No return value." : `Retu
 });
 
 confirmBtn1.addEventListener('click', (event) => {
-event.preventDefault();
-Dialog3.close(inputEl3.value); 
+    event.preventDefault();
+    Dialog1.close(inputEl1.value); 
+});
+confirmBtn2.addEventListener('click', (event) => {
+    event.preventDefault();
+    Dialog1.close(inputEl1.value); 
+});
+confirmBtn1.addEventListener('click', (event) => {
+    event.preventDefault();
+    Dialog1.close(inputEl1.value); 
 });
     </script>
 </body>

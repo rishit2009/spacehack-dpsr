@@ -173,29 +173,38 @@
 
 
         <!-- dialog -->
-        <dialog>
-            <h2></h2>
-            <form action="">
-                <details class="multiple-select">
-                    <summary>Select</summary>
-                    <div class="multiple-select-dropdown">
-                        <label>
-                            <input type="checkbox" hidden name="select" value="1">
-                            <span class="content">Therapy</span>
-                        </label>
-                        <label>
-                            <input type="checkbox" hidden name="select" value="2">
-                            <span class="content">Excercise</span>
-                        </label>
-                        <label>
-                            <input type="checkbox" hidden name="select" value="3">
-                            <span class="content">Yoga</span>
-                        </label>
+        <dialog class="relative">
+                <h1 class="my-4">Book an appointment</h1>
+                <button id="closeBtn" class="absolute right-2 top-2"><ion-icon name="close-circle-outline" size="large"></ion-icon></button>
+            <form action="" class="flex flex-col">                
+                <div class="dropdown relative inline-block text-left">
+                    <div>
+                        <button id="dropdownButton" type="button"
+                        class="inline-flex justify-between items-center w-full rounded-lg border border-slate-800 shadow-sm px-4 py-2 bg-orange-400 text-sm font-medium text-black hover:bg-orange-300">
+                        <span id="dropdownLabel">Select an option</span>
+                        <ion-icon name="chevron-down-outline" class="ml-2 text-lg"></ion-icon>
+                      </button>
                     </div>
-                </details>
-                <input type="datetime-local">
-                <button></button>
-                <button></button>
+                  
+                    <div id="dropdownMenu" class="hidden w-full origin-top-right absolute right-0 mt-2 rounded-lg shadow-lg bg-green-400 font-semibold z-10">
+                      <div role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+                        <label class="flex items-center px-4 py-2 text-sm text-black hover:bg-green-100 cursor-pointer rounded-t-lg" role="menuitem">
+                          <input type="radio" hidden name="dropdown-options" class="form-radio h-4 w-4 text-indigo-600" value="Therapy">
+                          <span>Therapy</span>
+                        </label>
+                        <label class="flex items-center px-4 py-2 text-sm text-black hover:bg-green-100 cursor-pointer" role="menuitem">
+                          <input type="radio" hidden name="dropdown-options" class="form-radio h-4 w-4 text-indigo-600" value="Excercise">
+                          <span>Excercise</span>
+                        </label>
+                        <label class="flex items-center px-4 py-2 text-sm text-black hover:bg-green-100 cursor-pointer rounded-b-lg" role="menuitem">
+                          <input type="radio" hidden name="dropdown-options" class="form-radio h-4 w-4 text-indigo-600" value="Yoga">
+                          <span>Yoga</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                <input type="datetime-local" class="rounded-lg p-2 bg-orange-400 hover:bg-orange-300 text-black font-semibold">
+                <button class="btn-2" id="confirmBtn">Confirm</button>
             </form>
         </dialog>
     </main>
@@ -218,6 +227,47 @@
     })
 
 
+    const showButton = document.querySelector('#openDialog')
+    const Dialog = document.querySelector('dialog')
+    const confirmBtn = Dialog.querySelector('#confirmBtn')
+    const closeBtn = Dialog.querySelector('#closeBtn')
+
+    showButton.addEventListener('click', () => {
+        Dialog.showModal();
+        });
+        Dialog.addEventListener('close', (e) => {
+            outputBox.value = Dialog.returnValue === 'default' ? "No return value." : `ReturnValue: ${Dialog1.returnValue}.`;
+        });
+
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+  const dropdownButton = document.getElementById('dropdownButton');
+  const dropdownMenu = document.getElementById('dropdownMenu');
+  const dropdownLabel = document.getElementById('dropdownLabel');
+  const radioButtons = document.querySelectorAll('input[name="dropdown-options"]');
+
+  // Toggle dropdown menu visibility
+  dropdownButton.addEventListener('click', function() {
+    dropdownMenu.classList.toggle('hidden');
+  });
+
+  // Update the label and close the dropdown when an option is selected
+  radioButtons.forEach(radio => {
+    radio.addEventListener('click', function() {
+      dropdownLabel.textContent = this.value;
+      dropdownMenu.classList.add('hidden');
+    });
+  });
+
+  // Close the dropdown if clicked outside of it
+  document.addEventListener('click', function(event) {
+    if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+      dropdownMenu.classList.add('hidden');
+    }
+  });
+});
 
   </script>
 </body>
