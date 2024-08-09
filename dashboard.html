@@ -77,73 +77,74 @@
                 <h2 class="font-bold text-3xl mb-8">Calendar</h2>
                 <div class="flex flex-col gap-4">
                     <div class="flex gap-2 justify-between overflow-x-auto">
-                        <button class="flex-col bg-green-400 items-center flex p-2 rounded-lg hover:bg-green-400 active min-w-16" data-tab-target="#eight">
+                        <button class="date active " data-tab-target="#eight">
                             <span class="text-sm text-gray-200">Sun</span>
                             <span class="text-lg font-semibold">11</span>
                         </button>
-                        <button class="flex-col bg-green-400 items-center flex p-2 rounded-lg hover:bg-green-400 min-w-16" data-tab-target="#nine">
+                        <button class="date" data-tab-target="#nine">
                             <span class="text-sm text-gray-200">Mon</span>
                             <span class="text-lg font-semibold">12</span>
                         </button>
-                        <button class="flex-col bg-green-400 items-center flex p-2 rounded-lg hover:bg-green-400 min-w-16" data-tab-target="#ten">
+                        <button class="date" data-tab-target="#ten">
                             <span class="text-sm text-gray-200">Tues</span>
                             <span class="text-lg font-semibold">13</span>
                         </button>
-                        <button class="flex-col bg-green-400 items-center flex p-2 rounded-lg hover:bg-green-400 min-w-16" data-tab-target="#eleven">
+                        <button class="date" data-tab-target="#eleven">
                             <span class="text-sm text-gray-200">Wed</span>
                             <span class="text-lg font-semibold">14</span>
                         </button>
-                        <button class="flex-col bg-green-400 items-center flex p-2 rounded-lg hover:bg-green-400 min-w-16" data-tab-target="#twelve">
+                        <button class="date" data-tab-target="#twelve">
                             <span class="text-sm text-gray-200">Thurs</span>
                             <span class="text-lg font-semibold">15</span>
                         </button>
-                        <button class="flex-col bg-green-400 items-center flex p-2 rounded-lg hover:bg-green-400 min-w-16" data-tab-target="#thirteen">
+                        <button class="date" data-tab-target="#thirteen">
                             <span class="text-sm text-gray-200">Fri</span>
                             <span class="text-lg font-semibold">16</span>
                         </button>
-                        <button class="flex-col bg-green-400 items-center flex p-2 rounded-lg hover:bg-green-400 min-w-16" data-tab-target="#fourteen">
+                        <button class="date" data-tab-target="#fourteen">
                             <span class="text-sm text-gray-200">Sat</span>
                             <span class="text-lg font-semibold">17</span>
                         </button>
-                        <button class="flex-col bg-green-400 items-center flex p-2 rounded-lg hover:bg-green-400 min-w-16" data-tab-target="#fifteen">
+                        <button class="date" data-tab-target="#fifteen">
                             <span class="text-sm text-gray-200">Sun</span>
                             <span class="text-lg font-semibold">18</span>
                         </button>
                     </div>
-                    <div class="flex flex-col tab-content active" id="eight">
-                        <div class="flex flex-row items-center mb-8">
-                            <div class="flex flex-col items-center w-1/5">
-                                <span class="font-semibold text-xl">8:30-9:30</span>
-                                <span class="text-lg text-gray-400">AM</span>
+                    <div class="tab-content active" id="eight">
+                        <div class="appointment">
+                            <div class="time">
+                                <span>8:30-9:30</span>
+                                <span>AM</span>
                             </div>
-                            <div class="flex flex-row w-4/5 bg-orange-400 p-4 rounded-lg items-center gap-2">
-                                <img class="rounded-full" src="https://picsum.photos/seed/picsum/50" alt="">
-                                <p class="font-bold text-2xl">Dentist</p>
+                            <div class="details">
+                                <img src="https://picsum.photos/seed/picsum/50" alt="">
+                                <p>Dentist</p>
                             </div>
                         </div>
+                    </div>
+                <div class="tab-content" id="nine">
+                    <div class="appointment">
+                        <div class="time">
+                            <span>8:30-9:00</span>
+                            <span>AM</span>
+                        </div>
+                        <div class="details">
+                            <img src="https://picsum.photos/seed/picsum/50" alt="">
+                            <p >Neurologist</p>
+                        </div>
+                    </div>
+                    <div class="appointment">
+                        <div class="time">
+                            <span>7:00-8:00</span>
+                            <span>PM</span>
+                        </div>
+                        <div class="details">
+                            <img src="https://picsum.photos/seed/picsum/50" alt="">
+                            <p>Physiotherapist</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex flex-col tab-content" id="nine">
-                    <div class="flex flex-row items-center mb-8">
-                        <div class="flex flex-col items-center w-1/5">
-                            <span class="font-semibold text-xl">8:30-9:00</span>
-                            <span class="text-lg text-gray-400">AM</span>
-                        </div>
-                        <div class="flex flex-row w-4/5 bg-orange-400 p-4 rounded-lg items-center gap-2">
-                            <img class="rounded-full" src="https://picsum.photos/seed/picsum/50" alt="">
-                            <p class="font-bold text-2xl">Neurologist</p>
-                        </div>
-                    </div>
-                    <div class="flex flex-row items-center">
-                        <div class="flex flex-col items-center w-1/5">
-                            <span class="font-semibold text-xl">7:00-8:00</span>
-                            <span class="text-lg text-gray-400">PM</span>
-                        </div>
-                        <div class="flex flex-row w-4/5 bg-orange-400 p-4 rounded-lg items-center gap-2">
-                            <img class="rounded-full" src="https://picsum.photos/seed/picsum/50" alt="">
-                            <p class="font-bold text-2xl">Physiotherapist</p>
-                        </div>
-                    </div>
-            </div></div>
+        </div>
             
             <div class="flex flex-col justify-center tab-content" id="ten">
                 <p class="text-xl font-bold mt-4">Nothing Today!</p>
@@ -231,6 +232,7 @@
     const Dialog = document.querySelector('dialog')
     const confirmBtn = Dialog.querySelector('#confirmBtn')
     const closeBtn = Dialog.querySelector('#closeBtn')
+    const inputEl = Dialog.querySelector('input[type="datetime-local"]')
 
     showButton.addEventListener('click', () => {
         Dialog.showModal();
@@ -238,30 +240,31 @@
         Dialog.addEventListener('close', (e) => {
             outputBox.value = Dialog.returnValue === 'default' ? "No return value." : `ReturnValue: ${Dialog1.returnValue}.`;
         });
+        confirmBtn.addEventListener('click', (event) => {
+            event.preventDefault();
+            Dialog1.close(inputEl.value); 
+        });
 
 
 
 
         document.addEventListener('DOMContentLoaded', function() {
-  const dropdownButton = document.getElementById('dropdownButton');
-  const dropdownMenu = document.getElementById('dropdownMenu');
-  const dropdownLabel = document.getElementById('dropdownLabel');
-  const radioButtons = document.querySelectorAll('input[name="dropdown-options"]');
+            const dropdownButton = document.getElementById('dropdownButton');
+            const dropdownMenu = document.getElementById('dropdownMenu');
+            const dropdownLabel = document.getElementById('dropdownLabel');
+            const radioButtons = document.querySelectorAll('input[name="dropdown-options"]');
 
-  // Toggle dropdown menu visibility
-  dropdownButton.addEventListener('click', function() {
-    dropdownMenu.classList.toggle('hidden');
-  });
+            dropdownButton.addEventListener('click', function() {
+            dropdownMenu.classList.toggle('hidden');
+        });
 
-  // Update the label and close the dropdown when an option is selected
-  radioButtons.forEach(radio => {
-    radio.addEventListener('click', function() {
-      dropdownLabel.textContent = this.value;
-      dropdownMenu.classList.add('hidden');
-    });
-  });
+        radioButtons.forEach(radio => {
+            radio.addEventListener('click', function() {
+            dropdownLabel.textContent = this.value;
+            dropdownMenu.classList.add('hidden');
+        });
+        });
 
-  // Close the dropdown if clicked outside of it
   document.addEventListener('click', function(event) {
     if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
       dropdownMenu.classList.add('hidden');
