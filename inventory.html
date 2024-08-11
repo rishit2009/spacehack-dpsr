@@ -70,14 +70,12 @@
     <main>
       <h1 class="font-bold text-3xl mb-12">Inventory</h1>
         <ul class="items">
-            <dialog id="Dialog1">
+            <dialog class="min-w-[25rem]" id="Dialog1">
+                <button value="cancel" formmethod="dialog" class="interactable absolute right-4 top-4"><ion-icon name="close-circle-outline" size="large"></ion-icon></button>
                 <h1>Update</h1>
                 <form>
                     <input type="text" placeholder="New Quantity">
-                  <div>
-                    <button value="cancel" formmethod="dialog" class="btn-2 interactable">Cancel</button>
                     <button id="confirmBtn" value="default" class="btn-2 interactable">Confirm</button>
-                  </div>
                 </form>
             </dialog>
             <li>
@@ -86,14 +84,12 @@
                 <button class="btn interactable" id="showDialog1">Update</button>
             </li>
             
-            <dialog id="Dialog2">
+            <dialog class="min-w-[25rem]" id="Dialog2" class="relative">                
+                <button value="cancel" formmethod="dialog" class="interactable absolute right-4 top-4"><ion-icon name="close-circle-outline" size="large"></ion-icon></button>
                 <h1>Update</h1>
                 <form>
                     <input type="text" placeholder="New Quantity">
-                  <div>
-                    <button value="cancel" formmethod="dialog" class="btn-2 interactable">Cancel</button>
                     <button id="confirmBtn" value="default" class="btn-2 interactable">Confirm</button>
-                  </div>
                 </form>
             </dialog>
             <li>
@@ -102,14 +98,12 @@
                 <button class="btn interactable" id="showDialog2">Update</button>
             </li>
             
-            <dialog id="Dialog3">
+            <dialog class="min-w-[25rem]" id="Dialog3">
+                <button value="cancel" formmethod="dialog" class="interactable absolute right-4 top-4"><ion-icon name="close-circle-outline" size="large"></ion-icon></button>
                 <h1>Update</h1>
                 <form>
                     <input type="text" placeholder="New Quantity">
-                  <div>
-                    <button value="cancel" formmethod="dialog" class="btn-2 interactable">Cancel</button>
                     <button id="confirmBtn" value="default" class="btn-2 interactable">Confirm</button>
-                  </div>
                 </form>
             </dialog>
             <li>
@@ -129,14 +123,17 @@
         const Dialog1 = document.getElementById('Dialog1');
         const inputEl1 = Dialog1.querySelector('input');
         const confirmBtn1 = Dialog1.querySelector('#confirmBtn');
+        const closeBtn1 = Dialog1.querySelector("button[value='cancel']");
 
-        const Dialog2 = document.getElementById('Dialog1');
-        const inputEl2 = Dialog1.querySelector('input');
-        const confirmBtn2 = Dialog1.querySelector('#confirmBtn');
+        const Dialog2 = document.getElementById('Dialog2');
+        const inputEl2 = Dialog2.querySelector('input');
+        const confirmBtn2 = Dialog2.querySelector('#confirmBtn');
+        const closeBtn2 = Dialog2.querySelector("button[value='cancel']");
 
-        const Dialog3 = document.getElementById('Dialog1');
-        const inputEl3 = Dialog1.querySelector('input');
-        const confirmBtn3 = Dialog1.querySelector('#confirmBtn');
+        const Dialog3 = document.getElementById('Dialog3');
+        const inputEl3 = Dialog3.querySelector('input');
+        const confirmBtn3 = Dialog3.querySelector('#confirmBtn');
+        const closeBtn3 = Dialog3.querySelector("button[value='cancel']");
 
         showButton1.addEventListener('click', () => {
         Dialog1.showModal();
@@ -182,17 +179,23 @@ Dialog3.addEventListener('close', (e) => {
 outputBox.value = Dialog3.returnValue === 'default' ? "No return value." : `ReturnValue: ${Dialog3.returnValue}.`;
 });
 
-confirmBtn1.addEventListener('click', (event) => {
+
+confirmBtn3.addEventListener('click', (event) => {
     event.preventDefault();
-    Dialog1.close(inputEl1.value); 
+    Dialog3.close(inputEl3.value); 
 });
-confirmBtn2.addEventListener('click', (event) => {
+
+closeBtn1.addEventListener('click', (event) => {
     event.preventDefault();
-    Dialog1.close(inputEl1.value); 
+    Dialog1.close(); 
 });
-confirmBtn1.addEventListener('click', (event) => {
+closeBtn2.addEventListener('click', (event) => {
     event.preventDefault();
-    Dialog1.close(inputEl1.value); 
+    Dialog2.close(); 
+});
+closeBtn3.addEventListener('click', (event) => {
+    event.preventDefault();
+    Dialog3.close(); 
 });
     </script>
 </body>

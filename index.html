@@ -65,7 +65,33 @@
     </div>
 </header>
     <main>
-        <section class="w-full">
+      <div class="hidden justify-center items-center mt-72 sm:flex">
+        <svg width="585" height="475" viewBox="0 0 585 475" fill="none" xmlns="http://www.w3.org/2000/svg" class="blur-[100px] absolute z-[-1]">
+            <defs>
+              <style>
+                  @keyframes colorChange {
+                    0%, 100% { fill: rgb(9, 126, 180); }
+                    50% { fill: rgb(34 197 94); }
+                  }
+                  .blob {
+                    animation: colorChange 8s infinite linear;
+                  }
+              </style>
+            </defs>
+            <path class="blob" d="M59.6878 70.4072C2.64247 112.7 -16.8108 220.14 15.7866 303.15C34.714 338.439 85.6079 417.473 137.764 451.308C202.958 493.601 346.492 482.305 380.666 392.728C414.841 303.151 608.848 251.138 582.56 142.122C556.271 33.1053 429.562 31.2664 323.621 6.83623C217.68 -17.5939 116.733 28.1141 59.6878 70.4072Z" fill="rgb(34 197 94)"/>
+          </svg>
+    </div>
+    <div class="sm:-mt-72 flex flex-col items-center justify-center text-white">
+        <div class="h-72 w-72 absolute top-[8rem] z-[-1]"  style="animation: rise 1200ms ease-out;">
+          <img src="resources/astronaut.png" class="h-full w-full">
+        </div>
+        <div class="flex flex-col gap-4 items-center justify-center mt-[300px]">
+          <h1 class="text-5xl font-bold text-center">Welcome, Arni Verme</h1>
+          <h2 class="text-xl font-semibold text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolores vel est deserunt.</h2>
+              <a class="interactable btn" href="inventory.html">Check Inventory</a>
+        </div>
+    </div>
+        <!-- <section class="w-full">
             <div class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 mt-16 lg:flex-row lg:justify-between text-[#dadada]">
                 <div class="flex flex-col justify-center p-4 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
                     <h1 class="text-[3.9rem] font-bold text-[#dadada]"
@@ -95,7 +121,7 @@
                         class=" object-contain h-96 sm:h-80 lg:h-[30rem] xl:h-112 2xl:h-128">
                 </div>
             </div>
-        </section>
+        </section> -->
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#922b00" fill-opacity="1"
                 d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">

@@ -30,9 +30,6 @@ body{
   margin: 0;
   background-color: var(--slate-950);
 }
-main{
-  margin-inline: 36px;
-}
 body:hover > #trailer {
     opacity: 1;
   }
@@ -259,21 +256,27 @@ body:hover > #trailer {
     border: var(--white) 2px solid;
     border-radius: 8px;
     padding: .5rem 3rem;
-    transition: all 500ms;
+    font-weight: 500;
+    transition: color 500ms, background-color 500ms;
   }
   .btn:hover{
-    color: var(--orange-300);
+    background-color: var(--orange-400);
+    color: var(--black);
   }
 
   input[type='text']{
-    outline: 2px solid var(--orange-800);
+    outline: 2px solid var(--white);
     font: inherit;
     border-radius: 5px;
-    color: --white;
+    color: var(--black);
     padding: .75rem .5rem;
     border: 0;
-    background-color: var(--black);
+    background-color: var(--orange-400);
     transition: background-color 200ms;
+}
+input[type='text']::placeholder{
+  color: var(--black);
+  font-weight: 600;
 }
 
 .btn-2{
@@ -311,4 +314,15 @@ main dialog form {
 main dialog::backdrop {
   background-color: var(--slate-50);
   opacity: 0.2;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    top: 250px;
+  }
+  to {
+    opacity: 1;
+    top: 8rem;
+  }
 }
