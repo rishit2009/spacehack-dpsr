@@ -1,34 +1,45 @@
 :root{
-  --black      : rgb(0 0 0);
-  --white      : rgb(255 255 255);
-  --slate-50   : rgb(248 250 252);
-  --slate-100  : rgb(241 245 249);
-  --slate-200  : rgb(226 232 240);
-  --slate-300  : rgb(203 213 225);
-  --slate-400  : rgb(148 163 184);
-  --slate-500  : rgb(100 116 139);
-  --slate-600  : rgb(71 85 105);
-  --slate-700  : rgb(51 65 85);
-  --slate-800  : rgb(30 41 59);
-  --slate-900  : rgb(15 23 42);
-  --slate-950  : rgb(2 6 23); 
-  --orange-50  : rgb(255 247 237);
-  --orange-100 : rgb(255 237 213);
-  --orange-200 : rgb(254 215 170);
-  --orange-300 : rgb(253 186 116);
-  --orange-400 : rgb(251 146 60);
-  --orange-500 : rgb(249 115 22);
-  --orange-600 : rgb(234 88 12);
-  --orange-700 : rgb(194 65 12);
-  --orange-800 : rgb(154 52 18);
-  --orange-900 : rgb(124 45 18);
-  --orange-950 : rgb(67 20 7);
+  --black       : rgb(0 0 0);
+  --white       : rgb(255 255 255);
+  --slate-50    : rgb(248 250 252);
+  --slate-100   : rgb(241 245 249);
+  --slate-200   : rgb(226 232 240);
+  --slate-300   : rgb(203 213 225);
+  --slate-400   : rgb(148 163 184);
+  --slate-500   : rgb(100 116 139);
+  --slate-600   : rgb(71 85 105);
+  --slate-700   : rgb(51 65 85);
+  --slate-800   : rgb(30 41 59);
+  --slate-900   : rgb(15 23 42);
+  --slate-950   : rgb(2 6 23); 
+  --cyan-50	    : rgb(236 254 255);
+  --cyan-100    : rgb(207 250 254);
+  --cyan-200    : rgb(165 243 252);
+  --cyan-300    : rgb(103 232 249);
+  --cyan-400    : rgb(34 211 238);
+  --cyan-500    : rgb(6 182 212);
+  --cyan-600    : rgb(8 145 178);
+  --cyan-700    : rgb(14 116 144);
+  --cyan-800    : rgb(21 94 117);
+  --cyan-900    : rgb(22 78 99);
+  --cyan-950    : rgb(8 51 68);
+  --fuchsia-50	: rgb(253 244 255);
+  --fuchsia-100	: rgb(250 232 255);
+  --fuchsia-200	: rgb(245 208 254);
+  --fuchsia-300	: rgb(240 171 252);
+  --fuchsia-400	: rgb(232 121 249);
+  --fuchsia-500	: rgb(217 70 239);
+  --fuchsia-600	: rgb(192 38 211);
+  --fuchsia-700	: rgb(162 28 175);
+  --fuchsia-800	: rgb(134 25 143);
+  --fuchsia-900	: rgb(112 26 117);
+  --fuchsia-950	: rgb(74 4 78); 
 }
 
 body{
   color: var(--white);
   margin: 0;
-  background-color: var(--slate-950);
+  background-color: var(--black);
 }
 body:hover > #trailer {
     opacity: 1;
@@ -260,18 +271,18 @@ body:hover > #trailer {
     transition: color 500ms, background-color 500ms;
   }
   .btn:hover{
-    background-color: var(--orange-400);
+    background-color: var(--cyan-400);
     color: var(--black);
   }
 
   input[type='text']{
-    outline: 2px solid var(--white);
+    outline: 3px solid var(--cyan-400);
     font: inherit;
     border-radius: 5px;
     color: var(--black);
     padding: .75rem .5rem;
     border: 0;
-    background-color: var(--orange-400);
+    background-color: #555454;
     transition: background-color 200ms;
 }
 input[type='text']::placeholder{
@@ -293,10 +304,10 @@ input[type='text']::placeholder{
 }
 
 main dialog {
-  background-color: var(--slate-950);
+  background-color: var(--black);
   border-radius: 10px;
   padding: 2rem 3rem;
-  border: 5px solid var(--orange-500);
+  border: 2px solid var(--emerald-500);
   color: var(--white);
 }
 dialog h1 {

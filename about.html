@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Medify : About</title>
+    <link href="https://api.fontshare.com/v2/css?f[]=plus-jakarta-sans@400&f[]=zodiak@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body class="bg-black" style="font-family: 'Plus Jakarta Sans', sans-serif;">
+
+    <header class="min-h-32">
+        <div class="flex justify-between p-8 items-center desktop-nav">
+            <a class="interactable font-bold text-2xl " href="index.html">Space Pulse</a>
+    
+            <nav class="p-4 border rounded-full mr-7">
+                <div class="">
+                    <a href="#" class=" text-center interactable px-4 nav-link">Home</a>
+                    <a href="inventory.html" class=" text-center interactable px-4 nav-link">Inventory</a>
+                    <a href="dashboard.html" class=" text-center interactable px-4 nav-link">Health</a>
+                    <a href="#" class=" text-center interactable px-4 nav-link">Contact</a>
+                </div>
+            </nav>
+    
+    
+            <a href="#" class="border rounded-full py-2 px-6 hover:bg-slate-600 transition interactable">Sign Up</a>
+    
+            <div class="flex justify-center w-full nav-hidden" id="hidden-nav">
+                <nav class="p-4 border rounded-full text-center" style="backdrop-filter: blur(10px);">
+                  <a href="index.html" class="text-center interactable px-4 nav-link">Home</a>
+                  <a href="#" class="text-center interactable px-4 nav-link">Explore</a>
+                  <a href="dashboard.html" class=" text-center interactable px-4 nav-link">Health</a>
+                  <a href="#" class="text-center interactable px-4 nav-link">Contact</a>
+                </nav>
+            </div>
+    
+        </div>
+    
+    
+        
+          
+        <div class="nav-responsive">
+            <div class="flex w-full items-start z-100 justify-between p-12 fixed">
+                <a class="interactable font-bold text-2xl heading" href="index.html">Space Pulse</a>
+                <div class="hamburger-wrapper" onclick="toggleresponsive()">
+                    <div id="nav-icon3">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                    <nav class="mobile-nav flex flex-col gap-8 absolute top-20 left-8">
+                        <a href="#" class="font-semibold text-3xl">Home</a>
+                        <a href="#" class="font-semibold text-3xl">Explore</a>
+                        <a href="dashboard.html" class="font-semibold text-3xl">Health</a>
+                        <a href="#" class="font-semibold text-3xl">Contact</a>
+                    </nav>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+    <main class=" flex flex-col gap-8 mt-16 mx-12 items-center text-slate-50">
+        <section class="flex gap-4 w-full justify-between items-start max-w-[80rem] flex-col md:flex-row">
+          <div class="flex items-center"><h1 class="font-black text-7xl">Our Story</h1> <ion-icon name="arrow-down-outline" class="-rotate-45 text-8xl mt-2"></ion-icon></div>
+            <div class="w-full md:w-3/5 text-lg mt-4"><p class="font-semibold mb-4">
+                At SpaceIT, we are committed to helping astronauts navigate the challenges of space by offering a seamless blend of inventory tracking and health management. Our software ensures that supplies are efficiently monitored and health is carefully maintained, providing critical support in the vast expanse of space.</p><p>In the demanding and isolating environment of space, where every decision can have significant consequences, SpaceIT becomes an indispensable tool for astronauts. Our system not only tracks vital resources in real time, preventing shortages and reducing waste, but it also manages health appointments, to ensure astronauts' health is never sidelined. This comprehensive approach allows astronauts to maintain their physical and mental well-being while ensuring that their mission remains on track. By reducing the burden of resource management and health monitoring, SpaceIT enables astronauts to focus fully on their mission objectives, confident in the knowledge that their health and resources are meticulously managed.
+
+            </p></div>
+        </section>
+        <section class="-mx-12 px-12 py-16 flex flex-col items-center rounded-lg text-white w-full mb-20 bg-slate-800">
+            <h1 class="mb-12 text-6xl font-bold ">Meet our Team</h1>
+            
+            <div class="flex flex-wrap gap-8 justify-around text-slate-800">
+                <div class="h-[350px] w-[300px] bg-cyan-400	 rounded-lg flex flex-col items-center p-12">
+                    <div class="h-32 w-32 bg-slate-400 rounded-full overflow-hidden">
+                        <img src="undefined (1).jpeg" alt="">
+                    </div>
+                    <span class="font-bold text-3xl mt-12">Alex Garner</span>
+                    <span class="text-xl">Vice President</span>
+                </div>
+                <div class="h-[350px] w-[300px] bg-cyan-400	 rounded-lg flex flex-col items-center p-12">
+                    <div class="h-32 w-32 bg-slate-400 rounded-full overflow-hidden">
+                        <img src="undefined (2).jpeg" alt="">
+                    </div>
+                    <span class="font-bold text-3xl mt-12">Steve Son</span>
+                    <span class="text-xl">Department Head</span>
+                </div>
+                <div class="h-[350px] w-[300px] bg-cyan-400	 rounded-lg flex flex-col items-center p-12">
+                    <div class="h-32 w-32 bg-slate-400 rounded-full overflow-hidden">
+                        <img src="undefined (3).jpeg" alt="">
+                    </div>
+                    <span class="font-bold text-3xl mt-12">Lisa Johann</span>
+                    <span class="text-xl">Sales Manager</span>
+                </div>
+            </div>
+        </section>
+        <section class="m-4 md:m-8  text-slate-50">
+          <div class="container mx-auto p-4 my-6 space-y-2 text-center">
+              <p class="text-slate-400 text-3xl" data-aos="fade-up">Services</p>
+              <h2 class="text-8xl font-bold" 
+                  data-aos="fade-up">What do we offer
+              </h2>
+              <p class="text-slate-300" data-aos="fade-up">At Medify, we're committed to offering a wide array of services focused on elevating your health and vitality.<br>
+                  Our solutions are tailored to support your journey towards optimal well-being.</p>
+          </div>
+          <div class="container mx-auto flex justify-center gap-4 flex-wrap"
+              data-aos="fade-up">
+  
+              <div class="flex flex-col items-center p-4 max-w-[40rem]">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#06b6d4"
+                      class="w-8 h-8 text-yellow-600">
+                      <path fill-rule="evenodd"
+                          d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  <h3 class="my-3 text-3xl font-semibold">Health Assessments:</h3>
+                  <div class="space-y-1 leadi text-center">
+                      <p class="font-bold">Empower Your Wellness</p>
+                      <p class="text-center">Discover your unique profile through tailored assessments. Our advanced diagnostics provide detailed insights into your health status, guiding the creation of personalized wellness plans to address your specific concerns and goals.</p>
+                  </div>
+              </div>
+              <div class="flex flex-col items-center p-4 max-w-[40rem]">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="#06b6d4"
+                      class="w-8 h-8 text-yellow-600">
+                      <path fill-rule="evenodd"
+                          d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z"
+                          clip-rule="evenodd"></path>
+                  </svg>
+                  <h3 class="my-3 text-3xl font-semibold">Telemedicine Services</h3>
+                  <div class="space-y-1 leadi text-center">
+                      <p class="font-bold">Care Anywhere, Anytime</p>
+                      <p class="text-center	">Access expert care from the comfort of home. Our virtual consultations, prescription services, and follow-up appointments ensure seamless healthcare delivery, eliminating the need for traditional clinic visits.
+                      </p>
+                  </div>
+              </div>
+          </div>
+      </section>
+    </main>
+
+
+</body>
+</html>
